@@ -1,5 +1,10 @@
 # coding: utf-8
 
+# These are the sample codes to perform the attribution using our bayesian network system. 
+# Because the system is used internally for now and necessary modules couldn't be imported, 
+# e.g. alps, the codes only explain Python interface of our system. We show GUI in the link
+# https://github.com/cuauty/demo-2022/blob/main/distri-bayes-demo.mp4?raw=true
+
 # Setup the sample dataset
 from alps.bayes_net import dataset, mock_dataset
 bayes_samples = mock_dataset()
