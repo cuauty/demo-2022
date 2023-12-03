@@ -1,25 +1,19 @@
-.. include:: ../README.rst
-
-Welcome to Lumache's documentation!
+Welcome to Open-ACE's documentation
 ===================================
 
-**Lumache** (/lu'make/) is a Python library for cooks and food lovers
-that creates recipes mixing random ingredients.
-It pulls data from the `Open Food Facts database <https://world.openfoodfacts.org/>`_
-and offers a *simple* and *intuitive* API.
-
-Check out the :doc:`usage` section for further information, including
-how to :ref:`installation` the project.
-
-.. note::
-
-   This project is under active development.
-
-Contents
---------
 
 .. toctree::
+   :maxdepth: 2
+   :glob:
 
-   Home <self>
-   usage
-   api
+   Introduction <core/en/index>
+   Installation <core/en/install>
+   Contribution <core/en/contribution>
+   API Reference <source/openasce>
+
+
+.. toctree::
+   :maxdepth: 2
+   :titlesonly:
+
+   indices_tables
