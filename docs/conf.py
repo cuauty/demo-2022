@@ -18,8 +18,6 @@ import sys
 from recommonmark.parser import CommonMarkParser
 
 ROOT_PATH = os.path.join(os.path.abspath(os.path.dirname(__file__)), "..")
-print(f'=========={ROOT_PATH}')
-print(f'=========={os.path.join(ROOT_PATH, "openasce")}')
 
 sys.path.insert(0, ROOT_PATH)
 sys.path.insert(0, os.path.join(ROOT_PATH, "openasce"))
