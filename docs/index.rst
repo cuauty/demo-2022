@@ -9,7 +9,7 @@ Welcome to OpenASCE's documentation
    Introduction <core/en/index>
    Installation <core/en/install>
    Contribution <core/en/contribution>
-   API Reference <source/openasce>
+   API Reference <source/modules>
 
 
 .. toctree::
