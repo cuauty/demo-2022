@@ -1,13 +1,13 @@
 function build_api_doc()
 {
-    sphinx-apidoc -f -o source ${PROJECT_DIR}/python/openasce
+    pushd "${DOCS_DIR}"
+    sphinx-apidoc -f --module-first -o source ${PROJECT_DIR}/openasce
     make clean
     make html
+    popd
 }
 
 DOCS_DIR=$(cd "$(dirname $0)" && pwd)
 PROJECT_DIR="$DOCS_DIR"/..
 
-pushd "${DOCS_DIR}"
 build_api_doc
-popd

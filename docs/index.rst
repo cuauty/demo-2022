@@ -1,4 +1,4 @@
-Welcome to Open-ACE's documentation
+Welcome to OpenASCE's documentation
 ===================================
 
 

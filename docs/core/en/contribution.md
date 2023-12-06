@@ -2,11 +2,11 @@
 
 ## Submitting a Bug
 
-If you have found a non-security-related bug in Open-ACE, please search the Issues first to check if the bug has already been reported. If not, create a new Issue to describe the bug.
+If you have found a non-security-related bug in OpenASCE, please search the Issues first to check if the bug has already been reported. If not, create a new Issue to describe the bug.
 
 ## Submitting a Security Issue
 
-If you have discovered a security issue in Open-ACE, please do not disclose it publicly. Instead, contact the owner via email and provide a detailed description of the security issue.
+If you have discovered a security issue in OpenASCE, please do not disclose it publicly. Instead, contact the owner via email and provide a detailed description of the security issue.
 
 ## Resolving Existing Issues
 

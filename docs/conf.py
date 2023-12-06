@@ -17,10 +17,10 @@ import sys
 
 from recommonmark.parser import CommonMarkParser
 
-# py_path = os.path.abspath("../python/openasce")
-sys.path.insert(0, os.path.abspath(".."))
-sys.path.insert(0, os.path.abspath("../python"))
-sys.path.insert(0, os.path.abspath("../python/openasce"))
+ROOT_PATH = os.path.join(os.path.abspath(os.path.dirname(__file__)), "..")
+
+sys.path.insert(0, ROOT_PATH)
+sys.path.insert(0, ROOT_PATH + "../openasce")
 os.environ["BUILD_SPHINX_DOCUMENT"] = "1"
 print(sys.path)
 
@@ -30,14 +30,17 @@ from recommonmark.transform import AutoStructify
 
 # -- Project information -----------------------------------------------------
 
-project = "Open-ACE"
+project = "OpenASCE"
 copyright = "2023, AntGroup"
 author = "AntGroup"
 
-# The short X.Y version
-version = ""
+
+# Read Version
+with open(os.path.join(ROOT_PATH, "version.txt"), "r") as rf:
+    version = rf.readline().strip("\n").strip()
+
 # The full version, including alpha/beta/rc tags
-release = "0.1.0"
+release = version
 
 # -- General configuration ---------------------------------------------------
 
@@ -64,10 +67,7 @@ templates_path = ["_templates"]
 
 # The suffix(es) of source filenames.
 # You can specify multiple suffix as a list of string:
-#
-
 source_suffix = [".rst", ".md"]
-# source_suffix = '.rst'
 
 source_parsers = {
     ".md": CommonMarkParser,
@@ -127,7 +127,7 @@ html_css_files = ["css/custom.css"]
 # -- Options for HTMLHelp output ---------------------------------------------
 
 # Output file base name for HTML help builder.
-htmlhelp_basename = "open-ace-doc"
+htmlhelp_basename = "openasce-doc"
 
 # -- Options for LaTeX output ------------------------------------------------
 
@@ -153,7 +153,7 @@ latex_documents = [
     (
         master_doc,
         "openasce.tex",
-        "Open-ACE Documentation",
+        "OpenASCE Documentation",
         "AntGroup",
         "manual",
     ),
@@ -214,8 +214,16 @@ copybutton_prompt_is_regexp = True
 todo_include_todos = True
 
 
+# This is the expected signature of the handler for this event, cf doc
+def autodoc_skip_member_handler(app, what, name, obj, skip, options):
+    # Basic approach; you might want a regex instead
+    return name.startswith("test_") or name.startswith("Test") or name.endswith("_test")
+
+
 # -- Extension configuration -------------------------------------------------
 def setup(app):
+    # Connect the autodoc-skip-member event from apidoc to the callback
+    app.connect("autodoc-skip-member", autodoc_skip_member_handler)
     app.add_config_value(
         "recommonmark_config",
         {

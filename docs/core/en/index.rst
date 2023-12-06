@@ -1,13 +1,10 @@
 ********
-Contents
+OpenASCE
 ********
 
 .. toctree::
   overview
-  attribution
-  causal_discovery
-  causal_graph
-  causal_trees
-  classical_methods
-  debias
-  t_model
+  Causal Discovery <discovery/causal_discovery>
+  Causal Inference <inference/index>
+  Causal Attribution <attribution/attribution>
+  Causal Extension <extension/debias>
