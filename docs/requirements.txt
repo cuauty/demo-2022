@@ -24,13 +24,3 @@ sphinxcontrib-jsmath
 sphinxcontrib-qthelp
 sphinxcontrib-serializinghtml
 urllib3
-econml
-keras
-numpy
-pandas
-pybind11
-pyhocon
-scikit-learn
-scipy
-tensorflow
-torch
